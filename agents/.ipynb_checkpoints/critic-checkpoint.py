@@ -30,10 +30,12 @@ class Critic:
 
         # Add hidden layers for state pathway
         net_states = layers.Dense(units=32, activation='relu')(states)
+        net_states = layers.BatchNormalization()(net_states)
         net_states = layers.Dense(units=64, activation='relu')(net_states)
 
         # Add hidden layers for action pathway
         net_actions = layers.Dense(units=32, activation='relu')(actions)
+        net_actions = layers.BatchNormalization()(net_actions)
         net_actions = layers.Dense(units=64, activation='relu')(net_actions)
 
         # Combine state and action pathway

@@ -29,8 +29,11 @@ class Actor:
 
         # Add hidden layers
         net = layers.Dense(units=32, activation='relu')(states)
+        net = layers.BatchNormalization()(net)
         net = layers.Dense(units=64, activation='relu')(net)
+        net = layers.BatchNormalization()(net)
         net = layers.Dense(units=32, activation='relu')(net)
+        net = layers.BatchNormalization()(net)
 
         raw_actions = layers.Dense(units=self.action_size,
                                    activation='sigmoid',
