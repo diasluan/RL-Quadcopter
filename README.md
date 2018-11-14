@@ -4,7 +4,7 @@
 1. Clone the repository and navigate to the downloaded folder.
 
 ```
-git clone https://github.com/udacity/RL-Quadcopter-2.git
+git clone https://github.com/luan-rock/RL-Quadcopter.git
 cd RL-Quadcopter
 ```
 
